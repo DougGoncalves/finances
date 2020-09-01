@@ -1,7 +1,18 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.0
+  firebase-deploy: noyo/firebase-deploy@0.1.1
+jobs:
+  test:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test
+      - run: npm run build
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
-  node-tests:
+  version: 2.1
+  teste:
     jobs:
-      - node/test
+      - test
