@@ -71,3 +71,8 @@ public/
 *.sln
 *.sw?
 .DS_Store
+
+
+# firebase
+
+.firebaserc
