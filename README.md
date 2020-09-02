@@ -1,8 +1,12 @@
-# finances
+# React Microfrontend Finances
+
+In-browser React micro frontend module-ready. Made with single-spa. CI/CD with CircleCI and Firebase.
 
 ## Setup
 
 ```
-yarn
-yarn start
+npm i
+npm start
+npm build
+npm test
 ```
